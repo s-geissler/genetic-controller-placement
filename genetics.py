@@ -21,7 +21,7 @@ class Genetics:
         count: the number of selected vertices
         nodes: a list of vertices
         """
-        return random.sample(xrange(min(nodes), max(nodes)+1), self.i_size)
+        return random.sample(xrange(int(min(nodes)), int(max(nodes))+1), self.i_size)
     
     def population(self, nodes):
         """
@@ -39,6 +39,7 @@ class Genetics:
         """
         fitness = defaultdict(set)
         for v in individual:
+
             for k in matrix[v].keys():
                 if fitness[k] > matrix[v][k]:
                     fitness[k] = matrix[v][k]

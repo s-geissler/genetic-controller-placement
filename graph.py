@@ -57,6 +57,6 @@ class Graph(object):
         adj_matrix = defaultdict(set)
         for n in self.nodes:
             distances, _ = self.dijkstra(n)
-            adj_matrix[n] = distances
+            adj_matrix[int(n)] = distances
         return adj_matrix
 
